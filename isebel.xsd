@@ -19,7 +19,7 @@
     <xs:complexType>
       <xs:sequence>
         <!--
-          starndard fields
+          starndard fields blub
         -->
         <xs:element ref="dc:identifier" minOccurs="0" maxOccurs="1"/>
         <xs:element ref="dc:title" minOccurs="1" maxOccurs="unbounded"/>
