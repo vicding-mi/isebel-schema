@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<OAI-PMH
+    xmlns="http://www.openarchives.org/OAI/2.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/ http://www.openarchives.org/OAI/2.0/OAI-PMH.xsd">
+    <responseDate>2019-03-27T09:06:03Z</responseDate>
+    <request verb="GetRecord" identifier="https://apps.wossidia.de/webapp/run/node/XMD-S001-000-000-003" metadataPrefix="isebel">http://oai.wossidia.de/OAIHandler</request>
+    <GetRecord>
+        <record>
+            <header>
+                <identifier>https://apps.wossidia.de/webapp/run/node/XMD-S001-000-000-003</identifier>
+                <setSpec>story</setSpec>
+            </header>
+            <metadata>
+				
+				
+				<isebel:story
+						xmlns="http://www.isebel.eu/ns/isebel"
+						xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						xmlns:dc="http://purl.org/dc/elements/1.1/"
+						xmlns:datacite="http://datacite.org/schema/kernel-4"
+						xmlns:isebel="http://www.isebel.eu/ns/isebel"
+						xsi:schemaLocation="http://www.isebel.eu/ns/isebel isebel2.xsd"
+						id="190000003" xml:lang="deu">
+					
+					<dc:identifier>
+						https://apps.wossidia.de/webapp/run/node/XMD-S001-000-000-003
+					</dc:identifier>
+					
+					<dc:title>
+						[3] Ein Bettler wird erschlagen
+					</dc:title>
+					
+					<dc:title>
+						[3] Solicitor struck dead
+					</dc:title>
+					
+					<dc:type>
+						Belief legends - Hexensagen
+					</dc:type>
+					
+					
+					<isebel:contents>
+						
+						<isebel:content xml:lang="nds">
+							Neperstorf: En Mann ut Warin het bettelt. Se hebben em so vÃ¤l slagen mÃ¼ÃŸt. Se hebben
+							em upt Brett bunnen. He is in Blaut stickt. Dor geev dat Ã¤n Lied oever.
+							ErzÃ¤hler: ehem. SchÃ¤fer Kruse, Altersstift Schwerin, Kreis Schwerin;
+							Aufzeichner: Wossidlo, 4. 4. 1914.
+						</isebel:content>
+						
+						<isebel:content xml:lang="deu">
+							Ein Mann aus Warin hat gebettelt. Sie haben ihn so viel Schlagen mÃ¼ssen. Sie haben ihn
+							auf ein Brett gebunden. Er ist im Blut erstickt. Da gibt es ein Lied drÃ¼ber.
+						</isebel:content>
+						
+						<isebel:content xml:lang="eng">
+							A man from Warin was soliciting. They bet him so badly. They bond him on a plank.
+							He suffocated in his own blood. There is a song about it.
+						</isebel:content>
+						
+					</isebel:contents>
+					
+					
+					<isebel:places>
+						
+						<isebel:place id="XMD-M050-000-002-991">
+							<dc:title>Warin</dc:title>
+							<isebel:role>action</isebel:role>
+							<isebel:role>fiction</isebel:role>
+						</isebel:place>
+						
+						<isebel:place id="XMD-M050-000-002-992">
+							<dc:title>Schwerin</dc:title>
+							<isebel:point>
+								<datacite:pointLatitude>53.24855</datacite:pointLatitude>
+								<datacite:pointLongitude>12.65254</datacite:pointLongitude>
+							</isebel:point>
+							<isebel:role>narration</isebel:role>
+							<isebel:role>recording</isebel:role>
+						</isebel:place>
+						
+					</isebel:places>
+					
+					
+					<isebel:persons>
+						
+						<isebel:person id="XMD-M020-000-007-125">
+							<isebel:name>Kruse</isebel:name>
+							<isebel:role>contributor</isebel:role>
+							<isebel:role>narrator</isebel:role>
+							<isebel:role>scholar</isebel:role>
+							<isebel:profession>SchÃ¤fer</isebel:profession>
+							<isebel:birthDate>1914-04-04</isebel:birthDate>
+							<isebel:birthPlace id="XMD-M050-000-002-998">
+								<dc:title>Rostock</dc:title>
+								<isebel:point>
+									<datacite:pointLatitude>53.96541</datacite:pointLatitude>
+									<datacite:pointLongitude>13.12012</datacite:pointLongitude>
+								</isebel:point>
+							</isebel:birthPlace>
+							<isebel:deathDate>1985-04-04</isebel:deathDate>
+							<isebel:deathPlace id="XMD-M050-000-002-992">
+								<dc:title>Schwerin</dc:title>
+								<isebel:point>
+									<datacite:pointLatitude>53.24855</datacite:pointLatitude>
+									<datacite:pointLongitude>12.65254</datacite:pointLongitude>
+								</isebel:point>
+							</isebel:deathPlace>
+							<isebel:livingPlace id="1940">
+								<dc:title>Neubrandenburg</dc:title>
+								<isebel:point>
+									<datacite:pointLatitude>54.70238</datacite:pointLatitude>
+									<datacite:pointLongitude>12.60502</datacite:pointLongitude>
+								</isebel:point>
+							</isebel:livingPlace>
+						</isebel:person>
+						
+						<isebel:person id="XMD-M020-000-003-041">
+							<isebel:name>MÃ¼ller</isebel:name>
+							<isebel:role>informant</isebel:role>
+						</isebel:person>
+						
+					</isebel:persons>
+					
+					
+					<isebel:events>
+						
+						<isebel:event id="XMD-M099-000-030-710">
+							<dc:title>Ostern</dc:title>
+							<isebel:role>action</isebel:role>
+						</isebel:event>
+						
+						<isebel:event>
+							<isebel:date>1928-02-27</isebel:date>
+							<isebel:role>narration</isebel:role>
+						</isebel:event>
+						
+						<isebel:event>
+							<isebel:date>1928-02-24</isebel:date>
+							<isebel:thru>1928-02-25</isebel:thru>
+							<isebel:role>observation</isebel:role>
+						</isebel:event>
+						
+					</isebel:events>
+					
+					
+					<isebel:keywords>
+						
+						<isebel:keyword id="XMD-D010-000-013-922">schlagen</isebel:keyword>
+						<isebel:keyword id="XMD-D010-000-004-838">Mann</isebel:keyword>
+						<isebel:keyword id="XMD-D010-000-007-802">blau</isebel:keyword>
+						<isebel:keyword id="XMD-D010-000-013-843">ersticken</isebel:keyword>
+						<isebel:keyword id="XMD-D010-000-028-102">betteln</isebel:keyword>
+						<isebel:keyword id="XMD-D010-000-033-233">Brett</isebel:keyword>
+						<isebel:keyword id="XMD-D010-000-006-714">binden</isebel:keyword>
+						
+					</isebel:keywords>
+					
+					
+					<isebel:references>
+						<isebel:reference>Blah</isebel:reference>
+						<isebel:reference>Blub</isebel:reference>
+					</isebel:references>
+					
+				</isebel:story>				
+				
+            </metadata>
+        </record>
+    </GetRecord>
+</OAI-PMH>
