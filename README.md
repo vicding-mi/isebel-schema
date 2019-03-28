@@ -1,1 +1,1 @@
-# isebel-schema
+# ISEBEL Schema Discussion
