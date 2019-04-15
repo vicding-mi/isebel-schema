@@ -6,63 +6,66 @@
 	This schema must not be contaminated with provider-specific stuff.
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-		targetNamespace="http://www.isebel.eu/ns/isebel"
-		xmlns="http://www.isebel.eu/ns/isebel" elementFormDefault="qualified"
-		xmlns:xml="http://www.w3.org/XML/1998/namespace"
-		xmlns:dc="http://purl.org/dc/elements/1.1/"
-		xmlns:dcterms="http://purl.org/dc/terms/"
-		xmlns:datacite="http://datacite.org/schema/kernel-4">
-	
-	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
-	<xs:import namespace="http://purl.org/dc/elements/1.1/" schemaLocation="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd"/>
-	<xs:import namespace="http://purl.org/dc/terms/" schemaLocation="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd"/>
-	<xs:import namespace="http://datacite.org/schema/kernel-4" schemaLocation="https://schema.datacite.org/meta/kernel-4.1/metadata.xsd"/>
-	
-	
+	targetNamespace="http://www.isebel.eu/ns/isebel" xmlns="http://www.isebel.eu/ns/isebel"
+	elementFormDefault="qualified" xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/"
+	xmlns:datacite="http://datacite.org/schema/kernel-4" vc:minVersion="1.1"
+	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning">
+
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace"
+		schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+	<xs:import namespace="http://purl.org/dc/elements/1.1/"
+		schemaLocation="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd"/>
+	<xs:import namespace="http://purl.org/dc/terms/"
+		schemaLocation="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd"/>
+	<xs:import namespace="http://datacite.org/schema/kernel-4"
+		schemaLocation="https://schema.datacite.org/meta/kernel-4.2/metadata.xsd"/>
+
+
 	<!-- The story as the only valid XML root element. -->
-	<xs:element name="story" >
+	<xs:element name="story">
 		<xs:complexType>
 			<xs:sequence>
-				
+
 				<!-- Unique story identifier (in original collection). -->
 				<xs:element ref="dc:identifier"/>
-				
+
 				<!-- Story title (multiple titles for different languages). -->
 				<xs:element ref="dc:title" maxOccurs="unbounded"/>
-				
+
 				<!-- Content genre information (not media type). -->
 				<xs:element ref="dc:type" minOccurs="0" maxOccurs="unbounded"/>
-				
+
 				<!-- Story text (multiple texts for different languages)? -->
 				<xs:element name="contents" type="typeContents"/>
-				
+
 				<!-- Places of any type referenced by story. -->
 				<xs:element name="places" type="typePlaces" minOccurs="0"/>
-				
+
 				<!-- Persons of any type referenced by story. -->
 				<xs:element name="persons" type="typePersons" minOccurs="0"/>
-				
+
 				<!-- Dates/event of any type referenced by story. -->
 				<xs:element name="events" type="typeEvents" minOccurs="0"/>
-				
+
 				<!-- Keywords associated with story. -->
 				<xs:element name="keywords" type="typeKeywords" minOccurs="0"/>
-				
+
 				<!-- Arbitrary references for story. -->
 				<xs:element name="references" type="typeReferences" minOccurs="0"/>
-				
+
 			</xs:sequence>
-			
+
 			<!-- Internal story ID. -->
-			<xs:attribute name="id" type="xs:string" use="required"/>
-			
+			<xs:attribute ref="xml:id" use="required"/>
+
 			<!-- General language for story, can be overridden by sub elements if needed. -->
 			<xs:attribute ref="xml:lang" use="required"/>
-			
+
 		</xs:complexType>
 	</xs:element>
-	
-	
+
+
 	<!-- Place roles. -->
 	<xs:simpleType name="typePlaceRole">
 		<xs:restriction base="xs:string">
@@ -76,8 +79,8 @@
 			<xs:enumeration value="publication"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
-	
+
+
 	<!-- Person roles. -->
 	<xs:simpleType name="typePersonRole">
 		<xs:restriction base="xs:string">
@@ -92,8 +95,8 @@
 			<xs:enumeration value="informant"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
-	
+
+
 	<!-- Event roles. -->
 	<xs:simpleType name="typeEventRole">
 		<xs:restriction base="xs:string">
@@ -108,63 +111,63 @@
 			<xs:enumeration value="publication"/>
 		</xs:restriction>
 	</xs:simpleType>
-	
-	
+
+
 	<!-- Container type for all story texts. -->
 	<xs:complexType name="typeContents">
 		<xs:sequence>
 			<xs:element name="content" type="typeContent" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	
-	
+
+
 	<!-- Container type for all places. -->
 	<xs:complexType name="typePlaces">
 		<xs:sequence>
 			<xs:element name="place" type="typePlace" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	
-	
+
+
 	<!-- Container type for all persons. -->
 	<xs:complexType name="typePersons">
 		<xs:sequence>
 			<xs:element name="person" type="typePerson" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	
-	
+
+
 	<!-- Container type for all events. -->
 	<xs:complexType name="typeEvents">
 		<xs:sequence>
 			<xs:element name="event" type="typeEvent" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	
-	
+
+
 	<!-- Container type for all keywords. -->
 	<xs:complexType name="typeKeywords">
 		<xs:sequence>
 			<xs:element name="keyword" type="typeKeyword" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	
-	
+
+
 	<!-- Container type for all references. -->
 	<xs:complexType name="typeReferences">
 		<xs:sequence>
 			<xs:element name="reference" type="dc:SimpleLiteral" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	
-	
+
+
 	<!-- Story text. -->
 	<xs:complexType name="typeContent" mixed="true">
-		<xs:attribute ref="xml:lang" use="optional"/>
+		<xs:attribute ref="xml:lang" use="required"/>
 		<xs:attribute name="id" type="xs:string" use="optional"/>
 	</xs:complexType>
-	
-	
+
+
 	<!-- Simple place with a name and optional coordinates. -->
 	<xs:complexType name="typePlaceSimple">
 		<xs:sequence>
@@ -174,8 +177,8 @@
 		<xs:attribute ref="xml:lang" use="optional"/>
 		<xs:attribute name="id" type="xs:string" use="optional"/>
 	</xs:complexType>
-	
-	
+
+
 	<!-- Place with a name, optional coordinates, and a role. -->
 	<xs:complexType name="typePlace">
 		<xs:sequence>
@@ -186,8 +189,8 @@
 		<xs:attribute ref="xml:lang" use="optional"/>
 		<xs:attribute name="id" type="xs:string" use="optional"/>
 	</xs:complexType>
-	
-	
+
+
 	<!-- Person. -->
 	<xs:complexType name="typePerson">
 		<xs:sequence>
@@ -198,32 +201,30 @@
 			<xs:element name="birthPlace" type="typePlaceSimple" minOccurs="0"/>
 			<xs:element name="deathDate" type="xs:date" minOccurs="0"/>
 			<xs:element name="deathPlace" type="typePlaceSimple" minOccurs="0"/>
-			<xs:element name="livingPlace" type="typePlaceSimple" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="livingPlace" type="typePlaceSimple" minOccurs="0"
+				maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute ref="xml:lang" use="optional"/>
 		<xs:attribute name="id" type="xs:string" use="optional"/>
 	</xs:complexType>
-	
-	
+
+
 	<!-- Named event or date or duration. -->
 	<xs:complexType name="typeEvent">
 		<xs:sequence minOccurs="1" maxOccurs="unbounded">
-			<xs:choice>
-				<xs:element ref="dc:title"/>
-				<xs:sequence>
-					<xs:element name="date" type="xs:date"/>
-					<xs:element name="thru" type="xs:date" minOccurs="0"/>
-				</xs:sequence>
-			</xs:choice>
+			<xs:element ref="dc:title" minOccurs="0"/>
+			<xs:element name="date" type="xs:date" minOccurs="0"/>
+			<xs:element name="thru" type="xs:date" minOccurs="0"/>
 			<xs:element name="role" type="typeEventRole" maxOccurs="unbounded"/>
 		</xs:sequence>
 		<xs:attribute ref="xml:lang" use="optional"/>
 		<xs:attribute name="id" type="xs:string" use="optional"/>
+		<xs:assert test="exists(dc:title) or exists(date)"/>
 	</xs:complexType>
-	
-	
+
+
 	<!-- Keyword. -->
-	<xs:complexType name="typeKeyword" >
+	<xs:complexType name="typeKeyword">
 		<xs:simpleContent>
 			<xs:extension base="xs:NMTOKEN">
 				<xs:attribute ref="xml:lang" use="optional"/>
