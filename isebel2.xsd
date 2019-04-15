@@ -195,6 +195,7 @@
 	<xs:complexType name="typePerson">
 		<xs:sequence>
 			<xs:element name="name" type="xs:string"/>
+			<xs:element name="gender" type="xs:string"/>
 			<xs:element name="role" type="typePersonRole" maxOccurs="unbounded"/>
 			<xs:element name="profession" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="birthDate" type="xs:date" minOccurs="0"/>
