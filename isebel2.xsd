@@ -4,6 +4,7 @@
 	This is the minimal schema for ISEBEL story documents.
 	Individual institutions must use this schema to provide their stories.
 	This schema must not be contaminated with provider-specific stuff.
+	@version 2019-05-01
 -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
 	targetNamespace="http://www.isebel.eu/ns/isebel" xmlns="http://www.isebel.eu/ns/isebel"
@@ -35,7 +36,10 @@
 
 				<!-- Content genre information (not media type). -->
 				<xs:element ref="dc:type" minOccurs="0" maxOccurs="unbounded"/>
-
+				
+				<!-- Tale type information. -->
+				<xs:element name="taleTypes" type="typeTaleTypes" minOccurs="0"/>
+				
 				<!-- Story text (multiple texts for different languages)? -->
 				<xs:element name="contents" type="typeContents"/>
 
@@ -111,8 +115,16 @@
 			<xs:enumeration value="publication"/>
 		</xs:restriction>
 	</xs:simpleType>
-
-
+	
+	
+	<!-- Container type for all tale types. -->
+	<xs:complexType name="typeTaleTypes">
+		<xs:sequence>
+			<xs:element name="taleType" type="typeTaleType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	
 	<!-- Container type for all story texts. -->
 	<xs:complexType name="typeContents">
 		<xs:sequence>
@@ -159,8 +171,15 @@
 			<xs:element name="reference" type="dc:SimpleLiteral" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-
-
+	
+	
+	<!-- Tale type type. -->
+	<xs:complexType name="typeTaleType">
+		<xs:attribute name="number" type="xs:string" use="required"/>
+		<xs:attribute name="title" type="xs:string" use="optional"/>
+	</xs:complexType>
+	
+	
 	<!-- Story text. -->
 	<xs:complexType name="typeContent" mixed="true">
 		<xs:attribute ref="xml:lang" use="required"/>
@@ -230,6 +249,8 @@
 			<xs:extension base="xs:NMTOKEN">
 				<xs:attribute ref="xml:lang" use="optional"/>
 				<xs:attribute name="id" type="xs:string" use="optional"/>
+				<xs:attribute name="type" type="xs:string" use="optional"/>
+				<xs:attribute name="provenance" type="xs:string" use="optional"/>
 			</xs:extension>
 		</xs:simpleContent>
 	</xs:complexType>
