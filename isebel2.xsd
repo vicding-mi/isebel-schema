@@ -30,7 +30,7 @@
 				<xs:element ref="dc:identifier" />
 
 				<!-- Story title (multiple titles for different languages). -->
-				<xs:element ref="dc:title" maxOccurs="unbounded" />
+				<xs:element ref="dc:title" minOccurs="0" maxOccurs="unbounded" />
 
 				<!-- Content genre information (not media type). -->
 				<xs:element ref="dc:type" minOccurs="0" maxOccurs="unbounded" />
