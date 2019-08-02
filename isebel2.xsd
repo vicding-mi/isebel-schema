@@ -16,9 +16,9 @@
 	<xs:import namespace="http://www.w3.org/XML/1998/namespace"
 		schemaLocation="http://www.w3.org/2001/xml.xsd" />
 	<xs:import namespace="http://purl.org/dc/elements/1.1/"
-		schemaLocation="http://dublincore.org/schemas/xmls/qdc/2003/04/02/dc.xsd" />
+		schemaLocation="https://www.dublincore.org/schemas/xmls/qdc/dc.xsd" />
 	<xs:import namespace="http://datacite.org/schema/kernel-4"
-		schemaLocation="http://schema.datacite.org/meta/kernel-4.2/metadata.xsd" />
+		schemaLocation="https://schema.datacite.org/meta/kernel-4/metadata.xsd" />
 
 
 	<!-- The story as the only valid XML root element. -->
