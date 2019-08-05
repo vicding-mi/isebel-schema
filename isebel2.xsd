@@ -16,11 +16,9 @@
 	<xs:import namespace="http://www.w3.org/XML/1998/namespace"
 		schemaLocation="http://www.w3.org/2001/xml.xsd" />
 	<xs:import namespace="http://purl.org/dc/elements/1.1/"
-		schemaLocation="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" />
-	<xs:import namespace="http://purl.org/dc/terms/"
-		schemaLocation="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dcterms.xsd" />
+		schemaLocation="https://www.dublincore.org/schemas/xmls/qdc/dc.xsd" />
 	<xs:import namespace="http://datacite.org/schema/kernel-4"
-		schemaLocation="https://schema.datacite.org/meta/kernel-4.2/metadata.xsd" />
+		schemaLocation="https://schema.datacite.org/meta/kernel-4/metadata.xsd" />
 
 
 	<!-- The story as the only valid XML root element. -->
@@ -32,7 +30,7 @@
 				<xs:element ref="dc:identifier" />
 
 				<!-- Story title (multiple titles for different languages). -->
-				<xs:element ref="dc:title" maxOccurs="unbounded" />
+				<xs:element ref="dc:title" minOccurs="0" maxOccurs="unbounded" />
 
 				<!-- Content genre information (not media type). -->
 				<xs:element ref="dc:type" minOccurs="0" maxOccurs="unbounded" />
@@ -214,7 +212,7 @@
 	<xs:complexType name="typePerson">
 		<xs:sequence>
 			<xs:element name="name" type="xs:string" />
-			<xs:element name="gender" type="xs:string" />
+			<xs:element name="gender" minOccurs="0" type="xs:string" />
 			<xs:element name="role" type="typePersonRole" maxOccurs="unbounded" />
 			<xs:element name="profession" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
 			<xs:element name="birthDate" type="xs:date" minOccurs="0" />
@@ -239,7 +237,6 @@
 		</xs:sequence>
 		<xs:attribute ref="xml:lang" />
 		<xs:attribute name="id" type="xs:string" />
-		<xs:assert test="exists(dc:title) or exists(date)" />
 	</xs:complexType>
 
 
