@@ -29,6 +29,9 @@
 				<!-- Unique story identifier (in original collection). -->
 				<xs:element ref="dc:identifier" />
 
+				<!-- isebel.purl -->
+				<xs:element name="isebel:purl" type="xs:anyURI" minOccurs="1" maxOccurs="1" />
+
 				<!-- Story title (multiple titles for different languages). -->
 				<xs:element ref="dc:title" minOccurs="0" maxOccurs="unbounded" />
 
