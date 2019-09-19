@@ -30,7 +30,7 @@
 				<xs:element ref="dc:identifier" />
 
 				<!-- isebel.purl -->
-				<xs:element name="isebel:purl" type="xs:anyURI" minOccurs="1" maxOccurs="1" />
+				<xs:element name="purl" type="typePurl" minOccurs="1" maxOccurs="1"/>
 
 				<!-- Story title (multiple titles for different languages). -->
 				<xs:element ref="dc:title" minOccurs="0" maxOccurs="unbounded" />
@@ -69,6 +69,13 @@
 
 		</xs:complexType>
 	</xs:element>
+
+	<!-- isebel.purl -->
+	<xs:simpleType name="typePurl">
+		<xs:restriction base="xs:anyURI">
+			<xs:pattern value="https?://.+" />
+		</xs:restriction>
+	</xs:simpleType>
 
 
 	<!-- Place roles. -->
