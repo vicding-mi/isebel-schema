@@ -30,7 +30,7 @@
 				<xs:element ref="dc:identifier" />
 
 				<!-- isebel.purl -->
-				<xs:element name="purl" type="typePurl" minOccurs="1" maxOccurs="1"/>
+				<xs:element name="purl" type="typePurl" />
 
 				<!-- Story title (multiple titles for different languages). -->
 				<xs:element ref="dc:title" minOccurs="0" maxOccurs="unbounded" />
