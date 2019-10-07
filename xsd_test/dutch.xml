@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<isebel:story xmlns:isebel="http://www.isebel.eu/ns/isebel"
+    xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:datacite="http://datacite.org/schema/kernel-4"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.isebel.eu/ns/isebel isebel2.xsd http://www.w3.org/XML/1998/namespace http://www.w3.org/2001/xml.xsd http://purl.org/dc/elements/1.1/ https://www.dublincore.org/schemas/xmls/qdc/dc.xsd http://datacite.org/schema/kernel-4 metadata.xsd"
+    xml:id="nl.verhalenbank.41674" xml:lang="nl">
+    <dc:identifier>nl.verhalenbank.41674</dc:identifier>
+    <isebel:purl>http://www.verhalenbank.nl/items/show/41674</isebel:purl>
+    <dc:type xml:lang="nl">sage</dc:type>
+    <isebel:contents>
+        <isebel:content xml:lang="nl">Verdwenen kapelTege de ouwe tore in Haore hebbe we lijke
+            gevonde, daor zèn we d'r wel 'n stuk of vier-vijf tege gekomme. M'n vaoder zei: da zèn
+            mense, die d'r eige van kant gemaokt hebbe, want die mochte dan nie op 't echte
+            kerrukhof ligge. D'r is in Haore nog 'n kapel gewist, die allang verdwene is. In vruuger
+            tijd ginge we daor nog altij sinte maarten stoke, da gaf 'n vuur, daor was ik ok
+            liefhebber van. Da was in de Belverse akker 'n pracht gelegenheid. Dan ginge we musterd
+            en strooie weghaole bij de boere om die op de plek waor die Maartenkapel ha gestaon an
+            te stoke, mar elk jaor ginge d'r ok nog mense uit Haore daor bidde. Da was nog in
+            neugetientien. Da ging zo van deen op d'ander over; ze wouwe blijve bestaon, die ouwe
+            dinge. Of da vuurstoke nou van heidense oorsprong is? </isebel:content>
+    </isebel:contents>
+    <isebel:places>
+        <isebel:place id="geo28207" xml:lang="nl">
+            <dc:title xml:lang="nl">Haaren</dc:title>
+            <isebel:point>
+                <datacite:pointLatitude>51.6021331</datacite:pointLatitude>
+                <datacite:pointLongitude>5.2267124</datacite:pointLongitude>
+            </isebel:point>
+            <isebel:role>narration</isebel:role>
+        </isebel:place>
+    </isebel:places>
+    <isebel:persons>
+        <isebel:person xml:lang="nl">
+            <isebel:name>Snellen, W.</isebel:name>
+            <isebel:role>narrator</isebel:role>
+        </isebel:person>
+    </isebel:persons>
+    <isebel:events>
+        <isebel:event>
+            <isebel:date>1967-09-14</isebel:date>
+            <isebel:role>narration</isebel:role>
+        </isebel:event>
+    </isebel:events>
+    <isebel:keywords>
+        <isebel:keyword xml:lang="nl">kerkhof</isebel:keyword>
+        <isebel:keyword xml:lang="nl">lijken</isebel:keyword>
+        <isebel:keyword xml:lang="nl">verdwijnen</isebel:keyword>
+        <isebel:keyword xml:lang="nl">vuur</isebel:keyword>
+        <isebel:keyword xml:lang="nl">vinden</isebel:keyword>
+        <isebel:keyword xml:lang="nl">bidden</isebel:keyword>
+        <isebel:keyword xml:lang="nl">stoken</isebel:keyword>
+        <isebel:keyword xml:lang="nl">boeren</isebel:keyword>
+        <isebel:keyword xml:lang="nl">kapel</isebel:keyword>
+        <isebel:keyword xml:lang="nl">vroeger</isebel:keyword>
+        <isebel:keyword xml:lang="nl">verdwenen</isebel:keyword>
+        <isebel:keyword xml:lang="nl">heidens</isebel:keyword>
+        <isebel:keyword xml:lang="nl">oudetoren</isebel:keyword>
+    </isebel:keywords>
+</isebel:story>
