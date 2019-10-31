@@ -179,7 +179,7 @@
     <!-- Keyword. -->
     <xs:complexType name="typeKeyword">
         <xs:simpleContent>
-            <xs:extension base="xs:string">
+            <xs:extension base="xs:token">
                 <xs:attribute ref="xml:lang"/>
                 <xs:attribute name="id" type="xs:string"/>
                 <xs:attribute name="type" type="xs:string"/>
