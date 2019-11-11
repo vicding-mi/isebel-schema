@@ -64,14 +64,14 @@
     <!-- Container type for all places. -->
     <xs:complexType name="typePlaces">
         <xs:sequence>
-            <xs:element name="place" type="typePlace"/>
+            <xs:element name="place" type="typePlace" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
     <!-- Place with a name, optional coordinates, and a role. -->
     <xs:complexType name="typePlace">
         <xs:sequence>
-            <xs:element ref="dc:title" maxOccurs="unbounded"/>
+            <xs:element ref="dc:title"/>
             <xs:element name="point" type="datacite:point" minOccurs="0"/>
             <xs:element name="role" type="typePlaceRole" maxOccurs="unbounded"/>
         </xs:sequence>
