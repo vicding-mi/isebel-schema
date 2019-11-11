@@ -26,6 +26,14 @@
         </xs:restriction>
     </xs:simpleType>
 
+<!--    &lt;!&ndash; isebel.imageResource &ndash;&gt;-->
+<!--    <xs:complexType name="typeImageResource">-->
+<!--        <xs:simpleContent>-->
+<!--            <xs:extension base="typePurl">-->
+<!--                <xs:attribute name="id"/>-->
+<!--            </xs:extension>-->
+<!--        </xs:simpleContent>-->
+<!--    </xs:complexType>-->
 
     <!-- Container type for all tale types. -->
     <xs:complexType name="typeTaleTypes">
@@ -56,7 +64,7 @@
     <!-- Container type for all places. -->
     <xs:complexType name="typePlaces">
         <xs:sequence>
-            <xs:element name="place" type="typePlace" maxOccurs="unbounded"/>
+            <xs:element name="place" type="typePlace"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -200,6 +208,7 @@
         <xs:sequence>
             <xs:element name="imageResource" type="typeImageResource" maxOccurs="unbounded"/>
         </xs:sequence>
+<!--        <xs:attribute name="id" type="xs:string"/>-->
     </xs:complexType>
 
     <!-- Image resource. -->
