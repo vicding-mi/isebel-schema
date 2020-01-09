@@ -59,6 +59,9 @@
     <xs:complexType name="typeContent" mixed="true">
         <xs:attribute ref="xml:lang" use="required"/>
         <xs:attribute name="id" type="xs:string"/>
+	<xs:sequence>
+	    <xs:element ref="html:div"/>
+	</xs:sequence>
     </xs:complexType>
 
     <!-- Container type for all places. -->
