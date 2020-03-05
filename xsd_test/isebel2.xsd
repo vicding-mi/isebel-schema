@@ -107,7 +107,7 @@
     <xs:complexType name="typePerson">
         <xs:sequence>
             <xs:element name="name" type="xs:string"/>
-            <xs:element name="gender" minOccurs="0" type="xs:string"/>
+            <xs:element name="gender" minOccurs="0" type="typePersonGender"/>
             <xs:element name="role" type="typePersonRole" maxOccurs="unbounded"/>
             <xs:element name="profession" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="birthDate" type="xs:date" minOccurs="0"/>
@@ -120,7 +120,15 @@
         <xs:attribute ref="xml:lang"/>
         <xs:attribute name="id" type="xs:string"/>
     </xs:complexType>
-
+    
+    <!-- Person gender. -->
+    <xs:simpleType name="typePersonGender">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="male"/>
+            <xs:enumeration value="female"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
     <!-- Person roles. -->
     <xs:simpleType name="typePersonRole">
         <xs:restriction base="xs:string">
