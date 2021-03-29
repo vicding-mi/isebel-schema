@@ -48,6 +48,20 @@
         <xs:attribute name="title" type="xs:string"/>
     </xs:complexType>
 
+
+    <!-- Container type for all motifs. -->
+    <xs:complexType name="typeMotifs">
+        <xs:sequence>
+            <xs:element name="motif" type="typeMotif" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Motif type. -->
+    <xs:complexType name="typeMotif">
+        <xs:attribute name="number" type="xs:string" use="required"/>
+        <xs:attribute name="title" type="xs:string"/>
+    </xs:complexType>
+
     <!-- Container type for all story texts. -->
     <xs:complexType name="typeContents">
         <xs:sequence>
@@ -255,6 +269,9 @@
 
                 <!-- Tale type information. -->
                 <xs:element name="taleTypes" type="typeTaleTypes" minOccurs="0"/>
+
+                <!-- Motif information. -->
+                <xs:element name="motifs" type="typeMotifs" minOccurs="0"/>
 
                 <!-- Story text (multiple texts for different languages)? -->
                 <xs:element name="contents" type="typeContents"/>
